@@ -13,8 +13,8 @@ UltraStar Web Server is a web application that provides an interface for browsin
 ## Installation
 
 1. Install [Poetry](https://python-poetry.org/docs/#installation) if you haven't already.
-2. Clone this repository: git clone https://github.com/your_username/ultrastar-web-server.git`
-3. Navigate to the project directory: cd ultrastar-web-server`
+2. Clone this repository: `git clone https://github.com/your_username/ultrastar-web-server.git`
+3. Navigate to the project directory: `cd ultrastar-web-server`
 4. Run `poetry install` to install all dependencies.
 
 ## Configuration
@@ -41,7 +41,7 @@ UltraStar Web Server is a web application that provides an interface for browsin
 
  the Server
 
-1. Run poetry run flask run --host=0.0.0.0 --debug in the project directory.
+1. Run `poetry run flask run --host=0.0.0.0` in the project directory.
 2. This will start the server on port 5000 and make it accessible from any device on your local network.
 
 ## Contributing
