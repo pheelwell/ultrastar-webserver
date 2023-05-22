@@ -1,61 +1,7 @@
-# ULTRASTAR WEB SERVER
-
-## Description
-
-This is a web server for the game UltraStar Deluxe. It is written in Python and uses the Flask framework.
+# UltraStar Web Server
+UltraStar Web Server is a web application that provides an interface for browsing, searching, and playing songs from the popular karaoke game UltraStar Deluxe. It is written in Python using the Flask framework and SQLAlchemy for database management.
 
 ![Image](doc/example.jpg)
-
-## Installation
-
-this project uses poetry for dependency management. To install poetry, follow the instructions on https://python-poetry.org/docs/#installation
-
-After installing poetry, run `poetry install` to install all dependencies.
-
-## Usage
-
-### Indexing your Songs
-
-set SONGS_DIR in `index.py` to the directory where your songs are located.
-
-To load your Songs into the DB use `poetry run python index.py`
-
-This will create a file called `songs.db` in the specified directory. This file is used by the server to serve your songs.
-
-### Starting the Server
-
-To start the server, run `poetry run flask run` in the project directory. This will start the server on port 5000.
-
-  
-
-# TODOS
-
-this Repo is still a work in progress. Here are some things that need to be done:
-
-## Usability
-
-- [ ] Add a Dockerfile
-
-- [ ] Make SONGS_DIR configurable
-
-- [ ] Add a config file
-
-- [ ] Pack as a executable
-
-  
-
-## Features
-
-- [ ] Add a "Star" feature
-
-- [ ] Add a "Recently Played" feature
-
-- [ ] Add a "Recently Added" feature
-
-
-Write a better and more extensive Readme for the Github Page:# UltraStar Web Server
-
-UltraStar Web Server is a web application that provides an interface for browsing, searching, and playing songs from the popular karaoke game UltraStar Deluxe. It is written in Python using the Flask framework and SQLAlchemy for database management.
 
 ## Features
 
