@@ -20,7 +20,7 @@ set SONGS_DIR in `index.py` to the directory where your songs are located.
 
 To load your Songs into the DB use `poetry run python index.py`
 
-This will create a file called `songs.db` in the instance directory of the project. This file is used by the server to serve your songs.
+This will create a file called `songs.db` in the specified directory. This file is used by the server to serve your songs.
 
 ### Starting the Server
 
