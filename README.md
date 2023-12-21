@@ -30,8 +30,6 @@ UltraStar Web Server is a web application that provides an interface for browsin
 
    Replace `your_local_ip_address` with your computer's local IP address, `path_to_your_songs_directory` with the path to your UltraStar Deluxe songs folder, and `path_to_your_songs.db_file` and `path_to_your_ultrastar_database_file` with the paths to your desired SQLite database files.
 
-2. Set the `SONGFOLDER` variable in `index.py` to the path of your UltraStar Deluxe songs folder.
-
 ## Usage
 
 ### Indexing Songs
