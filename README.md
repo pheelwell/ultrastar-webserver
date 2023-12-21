@@ -44,6 +44,29 @@ UltraStar Web Server is a web application that provides an interface for browsin
 1. Run `poetry run flask run --host=0.0.0.0` in the project directory.
 2. This will start the server on port 5000 and make it accessible from any device on your local network.
 
+### Using Docker
+
+1. Build Docker image using `docker build -t ultrastar-webserver .`
+2. Create your .env file like so:
+```
+QR_URL=http://127.0.0.1:5000
+SONGFOLDER =/usdx/songs/
+SONG_DB=sqlite:////usdx/songs.db
+ULTRASTAR_DB=sqlite:////usdx/Ultrastar.db
+```
+3. Run index script
+```
+docker run --rm -v ./.env:/ultrastar/.env -v ~/.var/app/eu.usdx.UltraStarDeluxe/.ultrastardx:/usdx --entrypoint poetry -it ultrastar-webserver run python index.py
+```
+Replace `~/.var/app/eu.usdx.UltraStarDeluxe/.ultrastardx` with the folder that contains your Ultrastar.db. If you're using flatpak, the given path is fine.
+4. Start the Webserver: 
+```
+docker run --rm -v ./.env:/ultrastar/.env -v ~/.var/app/eu.usdx.UltraStarDeluxe/.ultrastardx:/usdx -p 5000:5000 -it ultrastar-webserver
+```
+Replace `~/.var/app/eu.usdx.UltraStarDeluxe/.ultrastardx` with the folder you used above. You may also change the first `5000` of the port definition to a port of your desire.
+
+If you use a rootless container environment (e.g. Podman) and use SELinux you'll have to add `:z` at the end of the volume definitions.
+
 ## Contributing
 
 Pull requests are welcome! If you have any ideas for new features or improvements, feel free to submit a pull request or open an issue.
@@ -52,7 +75,7 @@ Pull requests are welcome! If you have any ideas for new features or improvement
 
 ## Usability
 
-- [ ] Add a Dockerfile
+- [x] Add a Dockerfile
 - [x] Make SONGFOLDER configurable
 - [x] Add a config file
 - [ ] Pack as an executable
