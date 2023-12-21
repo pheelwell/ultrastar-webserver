@@ -48,7 +48,7 @@ def index_songs():
             if file.endswith('.mp3'):
                 batch -= 1
                 # get relative path for api route later
-                mp3_path = os.path.join(root, file).replace(SONGFOLDER, '')
+                mp3_path = os.path.join(root, file).replace(SONGFOLDER, '').strip("/")
                 # get metadata
                 # search for txt in same folder
                 # the name of the txt file is NOT the same as the mp3 file, so replacing the extension is not enough
