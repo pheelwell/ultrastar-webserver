@@ -9,7 +9,7 @@ load_dotenv()
 SONGFOLDER = os.getenv('SONGFOLDER')
 
 # Configure the SQLAlchemy engine
-engine = create_engine('sqlite:///F://webserver//songs.db')
+engine = create_engine(os.getenv('SONG_DB'))
 
 # Create a session factory
 Session = sessionmaker(bind=engine)
